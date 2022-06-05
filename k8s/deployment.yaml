@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pay
+  name: sad
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: pay
+      app: sad
   template:
     metadata:
       labels:
-        app: pay
+        app: sad
     spec:
       containers:
-      - image: okteto.dev/pay:latest
-        name: pay
+      - image: okteto.dev/sad:latest
+        name: sad
         ports:
         - containerPort: 8080
         env:
